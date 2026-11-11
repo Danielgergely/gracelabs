@@ -6,7 +6,7 @@
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
-    "run_worker_first": ["/api/*", "/whatsapp"],
+    "run_worker_first": true,
     "not_found_handling": "404-page"
   },
   // max 5 form submissions per minute per IP (per Cloudflare location)
@@ -14,9 +14,11 @@
   "vars": {
     "MAIL_TO": "hello@gracelabs.dev",
     "MAIL_FROM": "Grace Labs website <form@mail.gracelabs.dev>"
-  }
+  },
+  "routes": [
+    { "pattern": "gracelabs.dev", "custom_domain": true },
+    { "pattern": "www.gracelabs.dev", "custom_domain": true }
+  ]
   // Secrets (set with `npx wrangler secret put NAME`, never committed):
   //   RESEND_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, WHATSAPP_NUMBER (international format, no +)
-  // Custom domain gets added when we deploy:
-  //   "routes": [{ "pattern": "gracelabs.dev", "custom_domain": true }]
 }

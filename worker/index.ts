@@ -1,4 +1,5 @@
-// Runs in front of the static site for two routes only (see wrangler.jsonc → run_worker_first):
+// Runs in front of every request (see wrangler.jsonc → run_worker_first); everything except these is served from the static build:
+//   www.gracelabs.dev  → 301 to gracelabs.dev
 //   POST /api/contact  → email via Resend + a content-free Telegram ping
 //   GET  /whatsapp     → redirect to wa.me, so the number never appears in the page
 interface Env {
@@ -19,10 +20,16 @@ const clean = (v: unknown, max: number) => String(v ?? '').replace(/\r/g, '').tr
 
 export default {
   async fetch(req, env, ctx) {
-    const { pathname } = new URL(req.url);
+    const url = new URL(req.url);
+    const { pathname } = url;
+    if (url.hostname === 'www.gracelabs.dev') {
+      url.hostname = 'gracelabs.dev';
+      return Response.redirect(url.toString(), 301);
+    }
     if (pathname === '/whatsapp') {
-      return env.WHATSAPP_NUMBER
-        ? Response.redirect(`https://wa.me/${env.WHATSAPP_NUMBER}`, 302)
+      const number = (env.WHATSAPP_NUMBER ?? '').replace(/\D/g, ''); // wa.me wants digits only, no + or spaces
+      return number
+        ? Response.redirect(`https://wa.me/${number}`, 302)
         : new Response('WhatsApp is not configured yet.', { status: 503 });
     }
     if (pathname === '/api/contact') return contact(req, env, ctx);
