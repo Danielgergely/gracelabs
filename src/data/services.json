@@ -1,0 +1,17 @@
+[
+ {
+  "key": "web",
+  "color": "#5ad1ff",
+  "core": true
+ },
+ {
+  "key": "it",
+  "color": "#ffd06b",
+  "core": true
+ },
+ {
+  "key": "media",
+  "color": "#ff6fae",
+  "core": false
+ }
+]

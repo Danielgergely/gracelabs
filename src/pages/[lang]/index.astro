@@ -1,0 +1,17 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Home from '../../components/Home.astro';
+import Footer from '../../components/Footer.astro';
+import { LANGS, META, type Lang } from '../../data/site';
+
+export function getStaticPaths() {
+  return LANGS.map(lang => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+---
+<Base lang={lang} title={META[lang].title} description={META[lang].description}>
+  <Nav lang={lang} />
+  <Home lang={lang} />
+  <Footer lang={lang} />
+</Base>

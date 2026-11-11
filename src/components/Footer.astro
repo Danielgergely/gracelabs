@@ -1,0 +1,31 @@
+---
+import { SITE, LANGS, t as tr, type Lang } from '../data/site';
+interface Props { lang: Lang; path?: string }
+const { lang, path = '' } = Astro.props;
+const t = tr(lang);
+const home = `/${lang}/`;
+---
+<footer class="d-footer">
+  <div class="f-grid">
+    <div class="f-brand"><b>{SITE.brand}</b><span>{SITE.by}</span><p>{t.headline}</p></div>
+    <div>
+      <h4>{t.fNav}</h4>
+      <a href={`${home}#svc`}>{t.navSvc}</a><a href={`${home}#work`}>{t.navWork}</a><a href={`${home}#about`}>{t.navAbout}</a><a href={`${home}#contact`}>{t.contactKicker}</a>
+    </div>
+    <div>
+      <h4>{t.contactKicker}</h4>
+      <a href={`mailto:${SITE.email}`}>{SITE.email}</a><a href="/whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <div>
+      <h4>{t.fElse}</h4>
+      <a href={SITE.linkedin} target="_blank" rel="noopener">LinkedIn ↗</a><a href={SITE.github} target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <span>© 2026 {SITE.brand} · Daniel Gergely · {t.country}</span>
+    <span class="f-legal"><a href={`/${lang}/privacy/`}>{t.lgPrivacy}</a><a href={`/${lang}/imprint/`}>{t.lgImprint}</a></span>
+    <span class="d-lang">
+      {LANGS.map(l => <a href={`/${l}/${path}`} data-lang={l} hreflang={l} lang={l} class={l === lang ? 'on' : undefined}>{l.toUpperCase()}</a>)}
+    </span>
+  </div>
+</footer>

@@ -1,0 +1,9 @@
+---
+import LegalPage from '../../../components/LegalPage.astro';
+import { LANGS, type Lang } from '../../../data/site';
+
+export function getStaticPaths() {
+  return LANGS.map(lang => ({ params: { lang } }));
+}
+---
+<LegalPage lang={Astro.params.lang as Lang} page="imprint" />

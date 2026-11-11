@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from './Nav.astro';
+import Footer from './Footer.astro';
+import { t as tr, legalHtml, type Lang } from '../data/site';
+
+interface Props { lang: Lang; page: 'privacy' | 'imprint' }
+const { lang, page } = Astro.props;
+const t = tr(lang);
+const title = `${page === 'privacy' ? t.lgPrivacy : t.lgImprint} · Grace Labs`;
+const back = { en: '← Back to Grace Labs', de: '← Zurück zu Grace Labs', hu: '← Vissza a Grace Labshez' }[lang];
+---
+<Base lang={lang} title={title} description={title} path={`${page}/`}>
+  <Nav lang={lang} path={`${page}/`} />
+  <main id="main" class="legal-page">
+    <a class="back" href={`/${lang}/`}>{back}</a>
+    <Fragment set:html={legalHtml(lang, page)} />
+  </main>
+  <Footer lang={lang} path={`${page}/`} />
+  <script>
+    document.querySelectorAll<HTMLAnchorElement>('[data-lang]').forEach(a =>
+      a.addEventListener('click', () => { try { localStorage.setItem('gl-lang', a.dataset.lang!); } catch {} }));
+  </script>
+</Base>

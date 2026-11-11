@@ -1,0 +1,178 @@
+{
+ "cats": [
+  "work",
+  "others",
+  "photo",
+  "fun"
+ ],
+ "items": [
+  {
+   "title": "FischerGPT",
+   "img": "/img/fischergpt.jpg",
+   "kind": {
+    "en": "AI chat assistant",
+    "de": "KI-Chat-Assistent",
+    "hu": "MI-csevegőasszisztens"
+   },
+   "story": {
+    "forWho": "Fischer Spindle Group, a Swiss industrial company. This was my master thesis at the University of Zurich (2025).",
+    "need": "An AI assistant that knows the company’s own documents, while every employee only sees what they are allowed to see.",
+    "did": "Built a secure retrieval system (RAG) behind the company chat assistant, with permission-aware search, and showed that it answers at expert level."
+   },
+   "cat": "work",
+   "tags": "ai rag chatbot llm enterprise documents master thesis uzh fischer"
+  },
+  {
+   "title": "Fischer Planning Lab",
+   "bg": "linear-gradient(135deg,#f6d365,#c2703d)",
+   "link": "https://studierendenprojekte.wirtschaft.fhnw.ch/en/view/2824",
+   "kind": {
+    "en": "Planning web app",
+    "de": "Planungs-Web-App",
+    "hu": "Tervező webalkalmazás"
+   },
+   "story": {
+    "forWho": "Fischer Spindle Group. This was my bachelor thesis at FHNW (2023), with a summary, video and the full thesis behind the link.",
+    "need": "Weekly order planning ran on whiteboards, magnets and stickers, and took the team around 7 hours every week.",
+    "did": "Built a touch-friendly planning app for large screens that pulls data from the ERP and the timekeeping system, plus a dashboard for the workers."
+   },
+   "cat": "work",
+   "tags": "erp planning web app react python touch bachelor thesis fhnw fischer"
+  },
+  {
+   "title": "Fischer Spindle Portal",
+   "cat": "work",
+   "bg": "linear-gradient(135deg,#8fa3b8,#2f3e52)",
+   "tags": "portal intranet search mongodb sharepoint sap erp integration company fischer spindles",
+   "kind": {
+    "en": "Company portal",
+    "de": "Firmenportal",
+    "hu": "Vállalati portál"
+   },
+   "story": {
+    "forWho": "Fischer Spindle Group, where I worked for 6.5 years and grew from assistant to software developer.",
+    "need": "Information about every spindle and compressor was spread across many systems, so finding anything took time.",
+    "did": "Built one portal where employees find everything about a spindle in one place, connected to MongoDB for spindle data, SharePoint for manuals and datasheets, and SAP for order and quality history."
+   }
+  },
+  {
+   "title": "MyCompassion",
+   "cat": "work",
+   "bg": "linear-gradient(135deg,#5b8cff,#1d3fa8)",
+   "link": "https://mycompassion.ch",
+   "tags": "app ios android portal web ngo church sponsorship compassion",
+   "kind": {
+    "en": "Web portal & mobile app",
+    "de": "Webportal & Mobile-App",
+    "hu": "Webportál és mobilapp"
+   },
+   "story": {
+    "forWho": "Compassion Switzerland, the Christian NGO I work for.",
+    "need": "Sponsors want to stay close to the child they support, wherever they are.",
+    "did": "Part of the team building the MyCompassion web portal and app, where sponsors follow their sponsored children, write letters and manage their giving."
+   }
+  },
+  {
+   "title": "Bros Cafe",
+   "img": "/img/broscafe.jpg",
+   "link": "https://broscafe.hu",
+   "kind": {
+    "en": "Website & loyalty card",
+    "de": "Website & Treuekarte",
+    "hu": "Weboldal és hűségkártya"
+   },
+   "story": {
+    "forWho": "Our own cafe: my two brothers and I opened Bros Cafe in Budapest.",
+    "need": "A website that feels like the cafe, plus a digital loyalty card for regulars.",
+    "did": "Designed and built the site in Hungarian and English, set up hosting, and created an Apple Wallet loyalty card."
+   },
+   "cat": "others",
+   "tags": "website cafe coffee loyalty wallet budapest hungarian"
+  },
+  {
+   "title": "Workman",
+   "bg": "linear-gradient(135deg,#9fb8c8,#3d5566)",
+   "soon": true,
+   "kind": {
+    "en": "Website",
+    "de": "Website",
+    "hu": "Weboldal"
+   },
+   "story": {
+    "forWho": "Workman, craftsmen with heart: carpentry, gardening, caretaking and repairs.",
+    "need": "A website for a new business where every job also gives people a chance to get back into work.",
+    "did": "In progress: a warm, simple site in German, with design, hosting and domain taken care of."
+   },
+   "cat": "others",
+   "tags": "website craftsman handwerker social business german"
+  },
+  {
+   "title": "Soar in Spirit",
+   "cat": "others",
+   "bg": "linear-gradient(135deg,#d9b48f,#8c5a3c)",
+   "soon": true,
+   "tags": "website pottery ceramics art studio hungarian siss small business",
+   "kind": {
+    "en": "Pottery studio website",
+    "de": "Website für ein Töpferatelier",
+    "hu": "Kerámiastúdió weboldala"
+   },
+   "story": {
+    "forWho": "Soar in Spirit, the pottery studio of a potter who wants to show her work online.",
+    "need": "A simple, beautiful site she can be proud of, without having to deal with any tech.",
+    "did": "In progress: design, build, hosting and the siss.hu domain, all taken care of."
+   }
+  },
+  {
+   "title": "66",
+   "img": "/img/66.jpg",
+   "link": "https://66.broscafe.hu",
+   "kind": {
+    "en": "Bible quiz game",
+    "de": "Bibel-Quizspiel",
+    "hu": "Bibliai kvízjáték"
+   },
+   "story": {
+    "forWho": "Churches, youth groups and anyone who loves the Bible.",
+    "need": "A fun way to get to know the 66 books of the Bible, alone or as a group.",
+    "did": "Designed and built a quiz racing game with solo races, live group quizzes and a daily challenge."
+   },
+   "cat": "fun",
+   "tags": "game bible quiz church youth web"
+  },
+  {
+   "title": "MealOS",
+   "bg": "linear-gradient(135deg,#7ad3a8,#2c5d6e)",
+   "kind": {
+    "en": "iPad app",
+    "de": "iPad-App",
+    "hu": "iPad-app"
+   },
+   "story": {
+    "forWho": "Our own family kitchen.",
+    "need": "One place to plan the week’s meals, keep our recipes and know what to buy.",
+    "did": "Built an iPad app that plans the week, stores recipes, turns them into one smart shopping list, and syncs it with the whole household over iCloud."
+   },
+   "cat": "fun",
+   "tags": "app ipad ios swift meal planning recipes shopping family"
+  },
+  {
+   "title": "Trip highlights",
+   "cat": "photo",
+   "bg": "linear-gradient(135deg,#8ec5d6,#2e5e7a)",
+   "soon": true,
+   "tags": "photo photography trip travel highlights",
+   "kind": {
+    "en": "Photo series",
+    "de": "Fotoserie",
+    "hu": "Fotósorozat"
+   },
+   "story": {
+    "forWho": "Placeholder: a trip with a few photo highlights.",
+    "need": "",
+    "did": "Your photos here."
+   },
+   "gallery": []
+  }
+ ]
+}

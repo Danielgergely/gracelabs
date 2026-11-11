@@ -1,0 +1,374 @@
+{
+ "en": {
+  "headline": "Your tech person.",
+  "sub": "Agency quality at a price that fits. IT help, websites and apps, plus photo and video.",
+  "btn1": "Tell me what you need",
+  "btn2": "What I do",
+  "heroNote": "I do the work first. You pay afterwards, only if you're happy and only what you can.",
+  "payKicker": "How it works",
+  "payTitle": "Pay what fits.",
+  "s1t": "Just ask.",
+  "s1b": "Tell me what you need. Asking costs nothing, and there are no silly questions.",
+  "s2t": "I do the work.",
+  "s2b": "You see the finished result before you pay anything.",
+  "s3t": "You decide.",
+  "s3b": "If you're happy, pay what it's worth to you and what fits your budget. If money is tight, that's okay too.",
+  "payNote": "The only exception: costs I pay to others, like domain names, hosting or equipment. I pass those on at cost, and we always agree on them first.",
+  "payBody": "Many small businesses, churches and people starting out can't pay agency prices. I love helping exactly them, with the gifts and experience God gave me.",
+  "contactLead": "Asking is free. A sentence is enough to start.",
+  "svcKicker": "One light",
+  "svcTitle": "Three ways I can help.",
+  "badgeCore": "Core",
+  "badgeAlso": "Also",
+  "asksLabel": "People ask me things like",
+  "quotes": [
+   "“",
+   "”"
+  ],
+  "cards": [
+   {
+    "kicker": "Websites & apps",
+    "head": "Built for you.",
+    "line": "A website, an app or a small tool that saves you time. I design and build it, then take care of hosting and the domain name, so you don't have to.",
+    "items": [
+     "Website design & build",
+     "Mobile & web apps",
+     "Custom tools & automation",
+     "Hosting, domain & email",
+     "Updates & care"
+    ],
+    "asks": [
+     "I'd love a website for my pottery.",
+     "Can we stop doing this in Excel?"
+    ]
+   },
+   {
+    "kicker": "IT support & advice",
+    "head": "Your tech person.",
+    "line": "Honest advice and hands-on help with everything digital, explained in plain language.",
+    "items": [
+     "AI advice & setup",
+     "Choosing & buying equipment",
+     "Setup & configuration",
+     "Wi-Fi, backups & security",
+     "Troubleshooting & remote help"
+    ],
+    "asks": [
+     "Which laptop should I buy?",
+     "Can AI help with our newsletter?"
+    ]
+   },
+   {
+    "kicker": "Photo & video",
+    "head": "Stories worth keeping.",
+    "line": "Events, portraits and short films, shot and edited with care.",
+    "items": [
+     "Event & church highlights",
+     "Portraits & team photos",
+     "Sports & season films",
+     "Short promo clips"
+    ],
+    "asks": [
+     "Could you film our church weekend?",
+     "We need photos for our website."
+    ]
+   }
+  ],
+  "workKicker": "Selected work",
+  "workTitle": "Things I've made.",
+  "workSub": "Scroll sideways through each row, search, or tap a photo for the story.",
+  "soon": "Coming soon",
+  "stFor": "For",
+  "stNeed": "What they needed",
+  "stDid": "What I did",
+  "stVisit": "Have a look",
+  "aboutKicker": "About",
+  "aboutTitle": "Hi, I'm Daniel.",
+  "aboutP1": "Everything I can do, I was given. Grace Labs is my way of passing it on: good IT, websites and media for people who can't pay agency prices.",
+  "aboutP2": "I'm a software developer with an MSc in Informatics from the University of Zurich and more than 7 years of experience. By day I build software for a Christian NGO. With my two brothers I also run a small cafe in Budapest, so I know what it's like to build something with little time and a tight budget.",
+  "aboutP3": "Away from the keyboard I'm a dad first, and I love sport, especially football and running.",
+  "aboutChips": [
+   "MSc Informatics, UZH",
+   "7+ years in software",
+   "Co-founder of Bros Cafe",
+   "English · German · Hungarian"
+  ],
+  "photoPh": "Your photo here",
+  "contactKicker": "Contact",
+  "letterTitle": "Tell me what you need.",
+  "lName": "Your name",
+  "lContact": "Email or phone",
+  "lHelp": "How can I help?",
+  "lPh": "e.g. my laptop is slow, I need a website, can AI help my shop…",
+  "lSend": "Send",
+  "lOr": "or write to",
+  "lThanks": "Thanks ♥ talk soon",
+  "cat_work": "At work",
+  "cat_others": "For others",
+  "cat_fun": "My own projects",
+  "searchPh": "Search: website, AI, app, game…",
+  "noResults": "Nothing found. Try another word.",
+  "cat_photo": "Photography",
+  "replyNote": "I reply within 24 hours, usually much faster.",
+  "altLabel": "Prefer to chat?",
+  "waBtn": "Message me on WhatsApp",
+  "country": "Switzerland",
+  "fNav": "Explore",
+  "fElse": "Elsewhere",
+  "lgPrivacy": "Privacy",
+  "lgImprint": "Imprint",
+  "navSvc": "Services",
+  "navWork": "Work",
+  "navAbout": "About",
+  "navCta": "Get in touch",
+  "lError": "Sorry, that didn't go through. Please write to"
+ },
+ "de": {
+  "headline": "Dein Tech-Mensch.",
+  "sub": "Agenturqualität zu einem Preis, der passt. IT-Hilfe, Websites und Apps, dazu Foto und Video.",
+  "btn1": "Erzähl mir, was du brauchst",
+  "btn2": "Was ich mache",
+  "heroNote": "Ich mache die Arbeit zuerst. Du zahlst danach, nur wenn du zufrieden bist, und nur so viel, wie du kannst.",
+  "payKicker": "So funktioniert's",
+  "payTitle": "Zahl, was passt.",
+  "s1t": "Frag einfach.",
+  "s1b": "Erzähl mir, was du brauchst. Fragen kostet nichts, und es gibt keine dummen Fragen.",
+  "s2t": "Ich mache die Arbeit.",
+  "s2b": "Du siehst das fertige Ergebnis, bevor du etwas bezahlst.",
+  "s3t": "Du entscheidest.",
+  "s3b": "Wenn du zufrieden bist, zahlst du, was es dir wert ist und was in dein Budget passt. Wenn das Geld knapp ist, ist das auch okay.",
+  "payNote": "Einzige Ausnahme: Kosten, die ich an andere zahle, etwa für Domain, Hosting oder Geräte. Die gebe ich zum Selbstkostenpreis weiter, und wir sprechen sie immer vorher ab.",
+  "payBody": "Viele kleine Firmen, Kirchen und Menschen, die gerade etwas aufbauen, können sich keine Agenturpreise leisten. Genau ihnen helfe ich gern, mit den Gaben und der Erfahrung, die Gott mir geschenkt hat.",
+  "contactLead": "Fragen kostet nichts. Ein Satz reicht für den Anfang.",
+  "svcKicker": "Ein Licht",
+  "svcTitle": "Drei Wege, wie ich helfe.",
+  "badgeCore": "Schwerpunkt",
+  "badgeAlso": "Ausserdem",
+  "asksLabel": "Typische Fragen",
+  "quotes": [
+   "«",
+   "»"
+  ],
+  "cards": [
+   {
+    "kicker": "Websites & Apps",
+    "head": "Für dich gebaut.",
+    "line": "Eine Website, eine App oder ein kleines Tool, das dir Zeit spart. Ich gestalte und baue es und kümmere mich um Hosting und Domain, damit du es nicht musst.",
+    "items": [
+     "Webdesign & Umsetzung",
+     "Mobile & Web-Apps",
+     "Eigene Tools & Automatisierung",
+     "Hosting, Domain & E-Mail",
+     "Updates & Pflege"
+    ],
+    "asks": [
+     "Ich hätte gern eine Website für meine Töpferei.",
+     "Können wir aufhören, das in Excel zu machen?"
+    ]
+   },
+   {
+    "kicker": "IT-Support & Beratung",
+    "head": "Dein Tech-Mensch.",
+    "line": "Ehrliche Beratung und praktische Hilfe bei allem Digitalen, in verständlicher Sprache.",
+    "items": [
+     "KI-Beratung & Einrichtung",
+     "Geräte auswählen & kaufen",
+     "Einrichtung & Konfiguration",
+     "WLAN, Backups & Sicherheit",
+     "Fehlersuche & Fernhilfe"
+    ],
+    "asks": [
+     "Welchen Laptop soll ich kaufen?",
+     "Kann KI bei unserem Newsletter helfen?"
+    ]
+   },
+   {
+    "kicker": "Foto & Video",
+    "head": "Geschichten, die bleiben.",
+    "line": "Anlässe, Porträts und kurze Filme, mit Sorgfalt gedreht und geschnitten.",
+    "items": [
+     "Highlights von Anlässen & Gemeinde",
+     "Porträts & Teamfotos",
+     "Sport- & Saisonfilme",
+     "Kurze Promo-Clips"
+    ],
+    "asks": [
+     "Kannst du unser Gemeindewochenende filmen?",
+     "Wir brauchen Fotos für unsere Website."
+    ]
+   }
+  ],
+  "workKicker": "Ausgewählte Arbeiten",
+  "workTitle": "Was ich gemacht habe.",
+  "workSub": "Wisch durch die Reihen, such oder tipp auf ein Foto für die Geschichte dahinter.",
+  "soon": "Bald online",
+  "stFor": "Für",
+  "stNeed": "Was gebraucht wurde",
+  "stDid": "Was ich gemacht habe",
+  "stVisit": "Anschauen",
+  "aboutKicker": "Über mich",
+  "aboutTitle": "Hi, ich bin Daniel.",
+  "aboutP1": "Alles, was ich kann, habe ich geschenkt bekommen. Grace Labs ist meine Art, es weiterzugeben: gute IT, Websites und Medien für Menschen, die sich keine Agenturpreise leisten können.",
+  "aboutP2": "Ich bin Softwareentwickler mit einem Master in Informatik der Universität Zürich und über 7 Jahren Erfahrung. Tagsüber entwickle ich Software für eine christliche NGO. Mit meinen zwei Brüdern betreibe ich ausserdem ein kleines Café in Budapest. Ich weiss also, wie es ist, mit wenig Zeit und knappem Budget etwas aufzubauen.",
+  "aboutP3": "Neben der Tastatur bin ich vor allem Papa, und ich liebe Sport, besonders Fussball und Laufen.",
+  "aboutChips": [
+   "Master in Informatik, UZH",
+   "7+ Jahre Softwareentwicklung",
+   "Mitgründer von Bros Cafe",
+   "Deutsch · Englisch · Ungarisch"
+  ],
+  "photoPh": "Dein Foto hier",
+  "contactKicker": "Kontakt",
+  "letterTitle": "Erzähl mir, was du brauchst.",
+  "lName": "Dein Name",
+  "lContact": "E-Mail oder Telefon",
+  "lHelp": "Wobei kann ich helfen?",
+  "lPh": "z. B. mein Laptop ist langsam, ich brauche eine Website, kann KI meinem Laden helfen…",
+  "lSend": "Senden",
+  "lOr": "oder schreib an",
+  "lThanks": "Danke ♥ bis bald",
+  "cat_work": "Bei der Arbeit",
+  "cat_others": "Für andere",
+  "cat_fun": "Eigene Projekte",
+  "searchPh": "Suchen: Website, KI, App, Spiel…",
+  "noResults": "Nichts gefunden. Versuch ein anderes Wort.",
+  "cat_photo": "Fotografie",
+  "replyNote": "Ich antworte innert 24 Stunden, meistens viel schneller.",
+  "altLabel": "Lieber chatten?",
+  "waBtn": "Schreib mir auf WhatsApp",
+  "country": "Schweiz",
+  "fNav": "Entdecken",
+  "fElse": "Anderswo",
+  "lgPrivacy": "Datenschutz",
+  "lgImprint": "Impressum",
+  "navSvc": "Angebot",
+  "navWork": "Arbeiten",
+  "navAbout": "Über mich",
+  "navCta": "Kontakt",
+  "lError": "Das hat leider nicht geklappt. Schreib mir bitte an"
+ },
+ "hu": {
+  "headline": "A te informatikusod.",
+  "sub": "Ügynökségi minőség, a pénztárcádhoz igazítva. IT-segítség, weboldalak és appok, plusz fotó és videó.",
+  "btn1": "Mondd el, mire van szükséged",
+  "btn2": "Miben segítek",
+  "heroNote": "Először elvégzem a munkát. Utána fizetsz, csak ha elégedett vagy, és csak annyit, amennyit tudsz.",
+  "payKicker": "Így működik",
+  "payTitle": "Annyit fizetsz, amennyi belefér.",
+  "s1t": "Csak kérdezz.",
+  "s1b": "Mondd el, mire van szükséged. A kérdezés ingyenes, és nincs buta kérdés.",
+  "s2t": "Elvégzem a munkát.",
+  "s2b": "A kész eredményt még azelőtt látod, hogy bármit fizetnél.",
+  "s3t": "Te döntesz.",
+  "s3b": "Ha elégedett vagy, annyit fizetsz, amennyit megér neked, és amennyi a keretedbe belefér. Ha szűkös a pénz, az sem baj.",
+  "payNote": "Egyetlen kivétel: a külső költségek, például domain, tárhely vagy eszközök. Ezeket önköltségen adom tovább, és mindig előre egyeztetjük.",
+  "payBody": "Sok kis cég, gyülekezet és induló vállalkozó nem engedheti meg magának az ügynökségi árakat. Pont nekik segítek szívesen, azokkal a képességekkel és tapasztalattal, amiket Istentől kaptam.",
+  "contactLead": "A kérdezés ingyenes. Egy mondat elég az induláshoz.",
+  "svcKicker": "Egy fény",
+  "svcTitle": "Három terület, amiben segítek.",
+  "badgeCore": "Fő terület",
+  "badgeAlso": "Emellett",
+  "asksLabel": "Ilyeneket kérdeznek tőlem",
+  "quotes": [
+   "„",
+   "”"
+  ],
+  "cards": [
+   {
+    "kicker": "Weboldalak és appok",
+    "head": "Neked készül.",
+    "line": "Weboldal, app vagy egy kis eszköz, ami időt spórol neked. Megtervezem és elkészítem, a tárhelyet és a domaint pedig én intézem, hogy neked ne kelljen.",
+    "items": [
+     "Weboldaltervezés és -fejlesztés",
+     "Mobil- és webes appok",
+     "Egyedi eszközök és automatizálás",
+     "Tárhely, domain és e-mail",
+     "Frissítések és karbantartás"
+    ],
+    "asks": [
+     "Szeretnék egy weboldalt a fazekasműhelyemnek.",
+     "Meg tudnánk oldani, hogy ne Excelben csináljuk?"
+    ]
+   },
+   {
+    "kicker": "IT-támogatás és tanácsadás",
+    "head": "A te informatikusod.",
+    "line": "Őszinte tanács és kézzelfogható segítség mindenben, ami digitális, érthető nyelven.",
+    "items": [
+     "MI-tanácsadás és beállítás",
+     "Eszközök kiválasztása és beszerzése",
+     "Telepítés és beállítás",
+     "Wi-Fi, mentés és biztonság",
+     "Hibaelhárítás és távsegítség"
+    ],
+    "asks": [
+     "Milyen laptopot vegyek?",
+     "Segíthet a mesterséges intelligencia a hírlevelünkben?"
+    ]
+   },
+   {
+    "kicker": "Fotó és videó",
+    "head": "Történetek, amik megmaradnak.",
+    "line": "Események, portrék és rövid filmek, gondosan felvéve és megvágva.",
+    "items": [
+     "Események és gyülekezeti alkalmak",
+     "Portrék és csapatfotók",
+     "Sport- és szezonösszefoglalók",
+     "Rövid promóciós videók"
+    ],
+    "asks": [
+     "Le tudnád filmezni a gyülekezeti hétvégénket?",
+     "Fotók kellenének a weboldalunkra."
+    ]
+   }
+  ],
+  "workKicker": "Válogatott munkák",
+  "workTitle": "Amiket készítettem.",
+  "workSub": "Görgess oldalra a sorokban, keress, vagy koppints egy képre a történetért.",
+  "soon": "Hamarosan",
+  "stFor": "Kinek",
+  "stNeed": "Mire volt szükség",
+  "stDid": "Mit csináltam",
+  "stVisit": "Megnézem",
+  "aboutKicker": "Rólam",
+  "aboutTitle": "Szia, Dániel vagyok.",
+  "aboutP1": "Mindent, amit tudok, ajándékba kaptam. A Grace Labs az én módom arra, hogy továbbadjam: jó IT, weboldalak és média azoknak, akik nem engedhetik meg maguknak az ügynökségi árakat.",
+  "aboutP2": "Szoftverfejlesztő vagyok, informatikus mesterdiplomával a Zürichi Egyetemről és több mint 7 év tapasztalattal. Napközben egy keresztény segélyszervezetnek fejlesztek szoftvert, a két testvéremmel pedig egy kis kávézót viszünk Budapesten. Tudom tehát, milyen kevés idővel és szűkös kerettel felépíteni valamit.",
+  "aboutP3": "A billentyűzeten kívül mindenekelőtt apa vagyok, és imádom a sportot, főleg a focit és a futást.",
+  "aboutChips": [
+   "Informatikus MSc, UZH",
+   "7+ év szoftverfejlesztés",
+   "A Bros Cafe társalapítója",
+   "magyar · német · angol"
+  ],
+  "photoPh": "Ide jön a fotód",
+  "contactKicker": "Kapcsolat",
+  "letterTitle": "Mondd el, mire van szükséged.",
+  "lName": "A neved",
+  "lContact": "E-mail vagy telefon",
+  "lHelp": "Miben segíthetek?",
+  "lPh": "pl. lassú a laptopom, kellene egy weboldal, segíthet a MI a boltomnak…",
+  "lSend": "Küldés",
+  "lOr": "vagy írj ide:",
+  "lThanks": "Köszönöm ♥ hamarosan jelentkezem",
+  "cat_work": "Munkában",
+  "cat_others": "Másoknak",
+  "cat_fun": "Saját projektek",
+  "searchPh": "Keresés: weboldal, MI, app, játék…",
+  "noResults": "Nincs találat. Próbálj egy másik szót.",
+  "cat_photo": "Fotózás",
+  "replyNote": "24 órán belül válaszolok, általában sokkal hamarabb.",
+  "altLabel": "Inkább chatelnél?",
+  "waBtn": "Írj nekem WhatsAppon",
+  "country": "Svájc",
+  "fNav": "Oldalak",
+  "fElse": "Máshol",
+  "lgPrivacy": "Adatvédelem",
+  "lgImprint": "Impresszum",
+  "navSvc": "Szolgáltatások",
+  "navWork": "Munkáim",
+  "navAbout": "Rólam",
+  "navCta": "Kapcsolat",
+  "lError": "Ez sajnos nem sikerült. Kérlek, írj ide:"
+ }
+}

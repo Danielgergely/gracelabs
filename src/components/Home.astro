@@ -1,0 +1,137 @@
+---
+import { SITE, SERVICES, WORK, CAT_COLORS, hexToRgb, t as tr, type Lang } from '../data/site';
+import WaIcon from './WaIcon.astro';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = tr(lang);
+const [qo, qc] = t.quotes;
+const bgOf = (w: { img?: string; bg?: string }) => (w.img ? `url(${w.img})` : w.bg);
+
+// data the client script needs (search, story cards, form messages)
+const clientData = {
+  lang,
+  t: { soon: t.soon, stFor: t.stFor, stNeed: t.stNeed, stDid: t.stDid, stVisit: t.stVisit, lThanks: t.lThanks, lSend: t.lSend, lError: t.lError },
+  cats: Object.fromEntries(WORK.cats.map(c => [c, (t as Record<string, unknown>)[`cat_${c}`]])),
+  work: WORK.items,
+};
+---
+<canvas class="d-beam" aria-hidden="true"></canvas>
+<main id="main">
+  <section class="d-hero">
+    <h1>{SITE.brand}</h1>
+    <div class="by">{SITE.by}</div>
+    <h2 class="headline">{t.headline}</h2>
+    <p>{t.sub}</p>
+    <div class="d-btns"><a class="btn primary" href="#contact">{t.btn1}</a><a class="btn ghost" href="#svc">{t.btn2}</a></div>
+    <p class="promise">{t.heroNote}</p>
+    <div class="d-source"></div>
+  </section>
+
+  <section class="d-prism-sec">
+    <div class="k" data-lit>{t.svcKicker}</div>
+    <h2 data-lit>{t.svcTitle}</h2>
+    <div class="d-prism" data-lit-only aria-hidden="true">
+      <svg viewBox="0 0 220 200"><defs>
+        <linearGradient id="dpg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5ad1ff" stop-opacity=".35"/><stop offset=".5" stop-color="#ffd06b" stop-opacity=".3"/><stop offset="1" stop-color="#ff6fae" stop-opacity=".35"/></linearGradient>
+        <linearGradient id="dps" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity=".2"/></linearGradient></defs>
+        <polygon points="110,6 214,194 6,194" fill="rgba(255,255,255,.03)" stroke="url(#dps)" stroke-width="1.5"/>
+        <polygon class="fill" points="110,6 214,194 6,194" fill="url(#dpg)"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="d-services" id="svc">
+    {SERVICES.map((s, i) => {
+      const c = t.cards[i];
+      return (
+        <article class={`d-card ${s.core ? 'core' : 'media'}`} data-lit-only data-color={s.color} data-w={s.core ? 1.15 : 0.75} style={`--c:${hexToRgb(s.color)}`}>
+          <span class="badge" style="--d:0ms">{s.core ? t.badgeCore : t.badgeAlso}</span>
+          <div class="k" style="--d:110ms">{c.kicker}</div>
+          <h3 style="--d:220ms">{c.head}</h3>
+          <p style="--d:330ms">{c.line}</p>
+          <div class="asks" style="--d:440ms"><small>{t.asksLabel}</small>{c.asks.map(a => <span>{qo}{a}{qc}</span>)}</div>
+          <ul style="--d:550ms">{c.items.map(x => <li>{x}</li>)}</ul>
+        </article>
+      );
+    })}
+  </section>
+
+  <section class="d-lens-sec" aria-hidden="true"><div class="d-lens" data-lit-only></div></section>
+
+  <section class="d-text" id="values">
+    <div class="k" data-lit>{t.payKicker}</div>
+    <h2 data-lit>{t.payTitle}</h2>
+    <ol class="d-steps">
+      {[[t.s1t, t.s1b], [t.s2t, t.s2b], [t.s3t, t.s3b]].map(([title, body], n) => (
+        <li data-lit><span class="n">{n + 1}</span><div><b>{title}</b><p>{body}</p></div></li>
+      ))}
+    </ol>
+    <p class="note" data-lit>{t.payNote}</p>
+    <p data-lit>{t.payBody}</p>
+  </section>
+
+  <section class="d-work" id="work">
+    <div class="k" data-lit>{t.workKicker}</div>
+    <h2 data-lit>{t.workTitle}</h2>
+    <p class="sub" data-lit>{t.workSub}</p>
+    <input class="d-search" type="search" placeholder={t.searchPh} aria-label={t.searchPh} data-lit />
+    {WORK.cats.map(cat => (
+      <div class="d-row" data-cat={cat} data-lit-only data-off="60" style={`--c:${hexToRgb(CAT_COLORS[cat])}`}>
+        <div class="d-row-h"><span>{clientData.cats[cat]}</span><span class="n"></span></div>
+        <div class="d-strip">
+          {WORK.items.map((w, i) => [w, i] as const).filter(([w]) => w.cat === cat).map(([w, i], n) => (
+            <button class="d-pol" data-i={i} style={`--i:${n};--bg:${bgOf(w)}`}>
+              {w.soon && <span class="soon">{t.soon}</span>}
+              <div class="ph"></div>
+              <div class="meta"><small>{(w.kind as Record<string, string>)[lang]}</small><b>{w.title}</b><span class="go" aria-hidden="true">↗</span></div>
+            </button>
+          ))}
+        </div>
+      </div>
+    ))}
+    <p class="d-none" hidden>{t.noResults}</p>
+    <dialog class="d-story"><button class="x" aria-label="Close">×</button><div class="body"></div></dialog>
+  </section>
+
+  <section class="d-about" id="about">
+    <div class="d-about-grid">
+      <figure class="d-portrait" data-lit><div class="ph"><img src="/img/daniel.jpg" alt="Daniel Gergely" width="650" height="700" loading="lazy" decoding="async" /></div><figcaption>Daniel</figcaption></figure>
+      <div>
+        <div class="k" data-lit>{t.aboutKicker}</div>
+        <h2 data-lit>{t.aboutTitle}</h2>
+        <p data-lit>{t.aboutP1}</p>
+        <p data-lit>{t.aboutP2}</p>
+        <p data-lit>{t.aboutP3}</p>
+        <ul class="d-chips" data-lit>{t.aboutChips.map(c => <li>{c}</li>)}</ul>
+        <p class="sdg" data-lit>Soli Deo Gloria.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="d-contact" id="contact">
+    <div class="k" data-lit>{t.contactKicker}</div>
+    <p class="lead" data-lit>{t.contactLead}</p>
+    <p class="reply" data-lit><span class="dot"></span><span>{t.replyNote}</span></p>
+    <div class="d-env-wrap" data-lit-only data-anchor=".d-env" data-off="80">
+      <form class="d-letter" novalidate>
+        <h3>{t.letterTitle}</h3>
+        <label for="f-name">{t.lName}</label><input id="f-name" name="name" autocomplete="name" maxlength="100" />
+        <label for="f-contact">{t.lContact}</label><input id="f-contact" name="contact" autocomplete="email" maxlength="200" required />
+        <label for="f-msg">{t.lHelp}</label><textarea id="f-msg" name="message" rows="3" placeholder={t.lPh} maxlength="5000" required></textarea>
+        <div class="hp" aria-hidden="true"><label for="f-web">Website</label><input id="f-web" name="website" tabindex="-1" autocomplete="off" /></div>
+        <div class="row"><button type="submit">{t.lSend}</button><span class="or">{t.lOr} <a href={`mailto:${SITE.email}`}>{SITE.email}</a></span></div>
+        <p class="err" role="alert" hidden></p>
+      </form>
+      <div class="d-env" aria-hidden="true"><div class="back"></div><div class="front"></div><div class="flap"></div><div class="seal">GL</div></div>
+    </div>
+    <div class="d-alt" data-lit><span>{t.altLabel}</span>
+      <a class="wa" href="/whatsapp" target="_blank" rel="noopener"><WaIcon /><span>{t.waBtn}</span></a>
+    </div>
+  </section>
+</main>
+<script type="application/json" id="gl-data" set:html={JSON.stringify(clientData)}></script>
+<script>
+  import { initHome } from '../scripts/home';
+  initHome();
+</script>

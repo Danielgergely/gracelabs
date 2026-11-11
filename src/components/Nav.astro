@@ -1,0 +1,20 @@
+---
+import { SITE, LANGS, t as tr, type Lang } from '../data/site';
+interface Props { lang: Lang; path?: string }
+const { lang, path = '' } = Astro.props;
+const t = tr(lang);
+const home = `/${lang}/`;
+---
+<a class="skip" href="#main">Skip to content</a>
+<nav class="d-nav">
+  <a class="brand" href={home}><b>{SITE.brand}</b></a>
+  <div>
+    <a class="lk" href={`${home}#svc`}>{t.navSvc}</a>
+    <a class="lk" href={`${home}#work`}>{t.navWork}</a>
+    <a class="lk" href={`${home}#about`}>{t.navAbout}</a>
+    <a class="cta" href={`${home}#contact`}>{t.navCta}</a>
+    <span class="d-lang">
+      {LANGS.map(l => <a href={`/${l}/${path}`} data-lang={l} hreflang={l} lang={l} class={l === lang ? 'on' : undefined}>{l.toUpperCase()}</a>)}
+    </span>
+  </div>
+</nav>

@@ -1,0 +1,34 @@
+---
+// "/" picks a language: the visitor's earlier choice, else their browser language, else English.
+import { SITE, LANGS } from '../data/site';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Grace Labs</title>
+    <meta name="description" content="IT support, websites, apps and AI advice, plus photo and video. By Daniel Gergely." />
+    {LANGS.map(l => <link rel="alternate" hreflang={l} href={`${SITE.url}/${l}/`} />)}
+    <link rel="alternate" hreflang="x-default" href={`${SITE.url}/en/`} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script is:inline>
+      (function () {
+        var L = ['en', 'de', 'hu'], p = null;
+        try { p = localStorage.getItem('gl-lang'); } catch (e) {}
+        if (L.indexOf(p) < 0) {
+          var n = navigator.languages || [navigator.language || 'en'];
+          p = 'en';
+          for (var i = 0; i < n.length; i++) {
+            var c = String(n[i] || '').slice(0, 2).toLowerCase();
+            if (L.indexOf(c) >= 0) { p = c; break; }
+          }
+        }
+        location.replace('/' + p + '/' + location.hash);
+      })();
+    </script>
+  </head>
+  <body style="background:#08080b;color:#f2efe9;font-family:system-ui,sans-serif;padding:40px">
+    <noscript><p><a style="color:#ffd06b" href="/en/">English</a> · <a style="color:#ffd06b" href="/de/">Deutsch</a> · <a style="color:#ffd06b" href="/hu/">Magyar</a></p></noscript>
+  </body>
+</html>
