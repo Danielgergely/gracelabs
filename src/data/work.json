@@ -37,7 +37,8 @@
     "did": "Built a touch-friendly planning app for large screens that pulls data from the ERP and the timekeeping system, plus a dashboard for the workers."
    },
    "cat": "work",
-   "tags": "erp planning web app react python touch bachelor thesis fhnw fischer"
+   "tags": "erp planning web app react python touch bachelor thesis fhnw fischer",
+   "img": "/img/fischer-planning-lab.jpg"
   },
   {
    "title": "Fischer Spindle Portal",
@@ -53,7 +54,8 @@
     "forWho": "Fischer Spindle Group, where I worked for 6.5 years and grew from assistant to software developer.",
     "need": "Information about every spindle and compressor was spread across many systems, so finding anything took time.",
     "did": "Built one portal where employees find everything about a spindle in one place, connected to MongoDB for spindle data, SharePoint for manuals and datasheets, and SAP for order and quality history."
-   }
+   },
+   "img": "/img/spindle-portal.jpg"
   },
   {
    "title": "MyCompassion",
@@ -70,7 +72,8 @@
     "forWho": "Compassion Switzerland, the Christian NGO I work for.",
     "need": "Sponsors want to stay close to the child they support, wherever they are.",
     "did": "Part of the team building the MyCompassion web portal and app, where sponsors follow their sponsored children, write letters and manage their giving."
-   }
+   },
+   "img": "/img/mycompassion.jpg"
   },
   {
    "title": "Bros Cafe",
@@ -157,22 +160,28 @@
    "tags": "app ipad ios swift meal planning recipes shopping family"
   },
   {
-   "title": "Trip highlights",
+   "title": "Ticino weekend",
    "cat": "photo",
-   "bg": "linear-gradient(135deg,#8ec5d6,#2e5e7a)",
-   "soon": true,
-   "tags": "photo photography trip travel highlights",
+   "tags": "photo photography trip travel ticino tessin lake maggiore youth group forumg",
    "kind": {
     "en": "Photo series",
     "de": "Fotoserie",
     "hu": "Fotósorozat"
    },
    "story": {
-    "forWho": "Placeholder: a trip with a few photo highlights.",
-    "need": "",
-    "did": "Your photos here."
+    "forWho": "The youth group of ForumG Solothurn, on their Ascension weekend in Loco, Ticino (2019).",
+    "need": "Pictures that bring back the weekend: the lake, the valleys and the days together.",
+    "did": "Photographed the whole weekend and picked out the highlights."
    },
-   "gallery": []
+   "gallery": [
+    "/img/loco/valley.jpg",
+    "/img/loco/river.jpg",
+    "/img/loco/chapel.jpg",
+    "/img/loco/hills.jpg",
+    "/img/loco/path.jpg",
+    "/img/loco/grill.jpg"
+   ],
+   "img": "/img/loco-cover.jpg"
   }
  ]
 }

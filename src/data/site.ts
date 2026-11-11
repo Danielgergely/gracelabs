@@ -8,7 +8,7 @@ export const SITE = {
   by: 'by Daniel Gergely',
   url: 'https://gracelabs.dev',
   email: 'hello@gracelabs.dev',
-  address: '[Street No.], [ZIP City]', // TODO: home address for imprint + privacy notice
+  address: 'Mattenweg 17, 4802 Strengelbach',
   linkedin: 'https://www.linkedin.com/in/danielg98/',
   github: 'https://github.com/Danielgergely',
 };
