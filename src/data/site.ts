@@ -2,6 +2,7 @@ import i18n from './i18n.json';
 import legal from './legal.json';
 import work from './work.json';
 import services from './services.json';
+import reviews from './reviews.json';
 
 export const SITE = {
   brand: 'Grace Labs',
@@ -11,6 +12,7 @@ export const SITE = {
   address: 'Mattenweg 17, 4802 Strengelbach',
   linkedin: 'https://www.linkedin.com/in/danielg98/',
   github: 'https://github.com/Danielgergely',
+  game: 'https://66.broscafe.hu', // becomes https://66.gracelabs.dev once the game has moved
 };
 
 export const LANGS = ['en', 'de', 'hu'] as const;
@@ -38,5 +40,8 @@ export const legalHtml = (lang: Lang, page: 'privacy' | 'imprint') =>
 
 export const WORK = work;
 export const SERVICES = services;
+// Real quotes only, with the person's permission: { quote: { en, de, hu }, name, role: { en, de, hu } }
+export type Review = { quote: Record<string, string>; name: string; role?: Record<string, string> };
+export const REVIEWS = reviews as Review[];
 export const CAT_COLORS: Record<string, string> = { work: '#ffd06b', others: '#5ad1ff', photo: '#ff6fae', fun: '#b69cff' };
 export const hexToRgb = (h: string) => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16)).join(',');

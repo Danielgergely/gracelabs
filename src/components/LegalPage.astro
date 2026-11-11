@@ -8,9 +8,13 @@ interface Props { lang: Lang; page: 'privacy' | 'imprint' }
 const { lang, page } = Astro.props;
 const t = tr(lang);
 const title = `${page === 'privacy' ? t.lgPrivacy : t.lgImprint} · Grace Labs`;
+const desc = {
+  privacy: { en: 'How Grace Labs handles your data: no cookies, no tracking.', de: 'Wie Grace Labs mit deinen Daten umgeht: keine Cookies, kein Tracking.', hu: 'Hogyan kezeli a Grace Labs az adataidat: nincs süti, nincs követés.' },
+  imprint: { en: 'Who is behind Grace Labs and how to reach me.', de: 'Wer hinter Grace Labs steht und wie du mich erreichst.', hu: 'Ki áll a Grace Labs mögött, és hogyan érhetsz el.' },
+}[page][lang];
 const back = { en: '← Back to Grace Labs', de: '← Zurück zu Grace Labs', hu: '← Vissza a Grace Labshez' }[lang];
 ---
-<Base lang={lang} title={title} description={title} path={`${page}/`}>
+<Base lang={lang} title={title} description={desc} path={`${page}/`}>
   <Nav lang={lang} path={`${page}/`} />
   <main id="main" class="legal-page">
     <a class="back" href={`/${lang}/`}>{back}</a>

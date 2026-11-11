@@ -11,6 +11,7 @@ import { SITE, LANGS } from '../data/site';
     <meta name="description" content="IT support, websites, apps and AI advice, plus photo and video. By Daniel Gergely." />
     {LANGS.map(l => <link rel="alternate" hreflang={l} href={`${SITE.url}/${l}/`} />)}
     <link rel="alternate" hreflang="x-default" href={`${SITE.url}/en/`} />
+    <link rel="canonical" href={`${SITE.url}/en/`} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <script is:inline>
       (function () {

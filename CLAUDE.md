@@ -16,7 +16,7 @@ Personal business site of Daniel Gergely: IT support, websites/apps, AI advice, 
 - All texts in three languages in `src/data/i18n.json` (en/de/hu). Every user-facing change goes into all three.
 - German: Swiss spelling (no ß, «» quotes, "innert"), informal "du". Hungarian: informal "te". English is the default language.
 - Projects: `src/data/work.json` (categories work / others / photo / fun). Images in `public/img/`, web-sized; originals stay in git-ignored `src/img/`.
-- Legal texts: `src/data/legal.json` with `{address}` placeholder filled from `src/data/site.ts`. The imprint address is still a placeholder.
+- Legal texts: `src/data/legal.json` with `{address}` placeholder filled from `src/data/site.ts`.
 
 ## Rules
 

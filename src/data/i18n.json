@@ -121,7 +121,13 @@
   "navWork": "Work",
   "navAbout": "About",
   "navCta": "Get in touch",
-  "lError": "Sorry, that didn't go through. Please write to"
+  "lError": "Sorry, that didn't go through. Please write to",
+  "gameKicker": "Made for fun",
+  "gameTitle": "66: race through the Bible",
+  "gameLine": "My free Bible quiz game. Race alone, or play a live quiz with your church or youth group.",
+  "gameBtn": "Play 66",
+  "revKicker": "Kind words",
+  "revTitle": "What people say."
  },
  "de": {
   "headline": "Dein Tech-Mensch.",
@@ -245,7 +251,13 @@
   "navWork": "Arbeiten",
   "navAbout": "Über mich",
   "navCta": "Kontakt",
-  "lError": "Das hat leider nicht geklappt. Schreib mir bitte an"
+  "lError": "Das hat leider nicht geklappt. Schreib mir bitte an",
+  "gameKicker": "Aus Freude gemacht",
+  "gameTitle": "66: das Rennen durch die Bibel",
+  "gameLine": "Mein kostenloses Bibel-Quizspiel. Fahr allein ein Rennen oder spielt ein Live-Quiz mit eurer Kirche oder Jugendgruppe.",
+  "gameBtn": "66 spielen",
+  "revKicker": "Rückmeldungen",
+  "revTitle": "Was andere sagen."
  },
  "hu": {
   "headline": "A te informatikusod.",
@@ -369,6 +381,12 @@
   "navWork": "Munkáim",
   "navAbout": "Rólam",
   "navCta": "Kapcsolat",
-  "lError": "Ez sajnos nem sikerült. Kérlek, írj ide:"
+  "lError": "Ez sajnos nem sikerült. Kérlek, írj ide:",
+  "gameKicker": "Örömből készült",
+  "gameTitle": "66: verseny a Biblián át",
+  "gameLine": "Ingyenes bibliai kvízjátékom. Versenyezz egyedül, vagy játsszatok élő kvízt a gyülekezettel vagy az ifjúsági csoporttal.",
+  "gameBtn": "Játssz a 66-tal",
+  "revKicker": "Visszajelzések",
+  "revTitle": "Amit mások mondanak."
  }
 }

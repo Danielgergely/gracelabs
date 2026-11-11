@@ -15,9 +15,21 @@
     "hu": "MI-csevegőasszisztens"
    },
    "story": {
-    "forWho": "Fischer Spindle Group, a Swiss industrial company. This was my master thesis at the University of Zurich (2025).",
-    "need": "An AI assistant that knows the company’s own documents, while every employee only sees what they are allowed to see.",
-    "did": "Built a secure retrieval system (RAG) behind the company chat assistant, with permission-aware search, and showed that it answers at expert level."
+    "forWho": {
+     "en": "Fischer Spindle Group, a Swiss industrial company. This was my master thesis at the University of Zurich (2025).",
+     "de": "Fischer Spindle Group, ein Schweizer Industrieunternehmen. Das war meine Masterarbeit an der Universität Zürich (2025).",
+     "hu": "Fischer Spindle Group, egy svájci ipari vállalat. Ez volt a mesterszakos diplomamunkám a Zürichi Egyetemen (2025)."
+    },
+    "need": {
+     "en": "An AI assistant that knows the company’s own documents, while every employee only sees what they are allowed to see.",
+     "de": "Ein KI-Assistent, der die firmeneigenen Dokumente kennt, wobei alle Mitarbeitenden nur sehen, was sie sehen dürfen.",
+     "hu": "Egy MI-asszisztens, amely ismeri a cég saját dokumentumait, miközben minden munkatárs csak azt látja, amit láthat."
+    },
+    "did": {
+     "en": "Built a secure retrieval system (RAG) behind the company chat assistant, with permission-aware search, and showed that it answers at expert level.",
+     "de": "Ein sicheres Retrieval-System (RAG) hinter dem Chat-Assistenten der Firma gebaut, mit einer Suche, die Berechtigungen beachtet, und gezeigt, dass es auf Expertenniveau antwortet.",
+     "hu": "Biztonságos keresőrendszert (RAG) építettem a céges csevegőasszisztens mögé, jogosultságokat figyelembe vevő kereséssel, és megmutattam, hogy szakértői szinten válaszol."
+    }
    },
    "cat": "work",
    "tags": "ai rag chatbot llm enterprise documents master thesis uzh fischer"
@@ -32,9 +44,21 @@
     "hu": "Tervező webalkalmazás"
    },
    "story": {
-    "forWho": "Fischer Spindle Group. This was my bachelor thesis at FHNW (2023), with a summary, video and the full thesis behind the link.",
-    "need": "Weekly order planning ran on whiteboards, magnets and stickers, and took the team around 7 hours every week.",
-    "did": "Built a touch-friendly planning app for large screens that pulls data from the ERP and the timekeeping system, plus a dashboard for the workers."
+    "forWho": {
+     "en": "Fischer Spindle Group. This was my bachelor thesis at FHNW (2023), with a summary, video and the full thesis behind the link.",
+     "de": "Fischer Spindle Group. Das war meine Bachelorarbeit an der FHNW (2023); hinter dem Link findest du eine Zusammenfassung, ein Video und die ganze Arbeit.",
+     "hu": "Fischer Spindle Group. Ez volt az alapszakos szakdolgozatom az FHNW-n (2023); a link mögött összefoglaló, videó és a teljes dolgozat található."
+    },
+    "need": {
+     "en": "Weekly order planning ran on whiteboards, magnets and stickers, and took the team around 7 hours every week.",
+     "de": "Die wöchentliche Auftragsplanung lief über Whiteboards, Magnete und Kleber und kostete das Team jede Woche rund 7 Stunden.",
+     "hu": "A heti rendeléstervezés táblákon, mágnesekkel és matricákkal zajlott, és hetente körülbelül 7 órát vett el a csapattól."
+    },
+    "did": {
+     "en": "Built a touch-friendly planning app for large screens that pulls data from the ERP and the timekeeping system, plus a dashboard for the workers.",
+     "de": "Eine Planungs-App für grosse Touchscreens gebaut, die Daten aus dem ERP und der Zeiterfassung holt, dazu ein Dashboard für die Mitarbeitenden.",
+     "hu": "Érintőképernyős tervezőalkalmazást készítettem nagy kijelzőkre, amely az ERP-ből és a munkaidő-nyilvántartásból veszi az adatokat, valamint egy kijelzőt a dolgozóknak."
+    }
    },
    "cat": "work",
    "tags": "erp planning web app react python touch bachelor thesis fhnw fischer",
@@ -51,9 +75,21 @@
     "hu": "Vállalati portál"
    },
    "story": {
-    "forWho": "Fischer Spindle Group, where I worked for 6.5 years and grew from assistant to software developer.",
-    "need": "Information about every spindle and compressor was spread across many systems, so finding anything took time.",
-    "did": "Built one portal where employees find everything about a spindle in one place, connected to MongoDB for spindle data, SharePoint for manuals and datasheets, and SAP for order and quality history."
+    "forWho": {
+     "en": "Fischer Spindle Group, where I worked for 6.5 years and grew from assistant to software developer.",
+     "de": "Fischer Spindle Group, wo ich 6,5 Jahre gearbeitet habe und vom Assistenten zum Softwareentwickler gewachsen bin.",
+     "hu": "Fischer Spindle Group, ahol 6,5 évig dolgoztam, és asszisztensből szoftverfejlesztővé váltam."
+    },
+    "need": {
+     "en": "Information about every spindle and compressor was spread across many systems, so finding anything took time.",
+     "de": "Informationen zu jeder Spindel und jedem Kompressor waren über viele Systeme verteilt, die Suche kostete Zeit.",
+     "hu": "Az orsókról és kompresszorokról szóló információk sok rendszerben voltak szétszórva, így a keresés sok időbe került."
+    },
+    "did": {
+     "en": "Built one portal where employees find everything about a spindle in one place, connected to MongoDB for spindle data, SharePoint for manuals and datasheets, and SAP for order and quality history.",
+     "de": "Ein Portal gebaut, in dem Mitarbeitende alles zu einer Spindel an einem Ort finden, verbunden mit MongoDB für Spindeldaten, SharePoint für Handbücher und Datenblätter und SAP für Auftrags- und Qualitätshistorie.",
+     "hu": "Egy portált építettem, ahol a munkatársak egy helyen találnak mindent egy orsóról: MongoDB az orsóadatokhoz, SharePoint a kézikönyvekhez és adatlapokhoz, SAP a rendelési és minőségi előzményekhez."
+    }
    },
    "img": "/img/spindle-portal.jpg"
   },
@@ -69,9 +105,21 @@
     "hu": "Webportál és mobilapp"
    },
    "story": {
-    "forWho": "Compassion Switzerland, the Christian NGO I work for.",
-    "need": "Sponsors want to stay close to the child they support, wherever they are.",
-    "did": "Part of the team building the MyCompassion web portal and app, where sponsors follow their sponsored children, write letters and manage their giving."
+    "forWho": {
+     "en": "Compassion Switzerland, the Christian NGO I work for.",
+     "de": "Compassion Schweiz, das christliche Hilfswerk, für das ich arbeite.",
+     "hu": "Compassion Svájc, a keresztény segélyszervezet, ahol dolgozom."
+    },
+    "need": {
+     "en": "Sponsors want to stay close to the child they support, wherever they are.",
+     "de": "Patinnen und Paten möchten dem Kind, das sie unterstützen, nahe bleiben, egal wo sie sind.",
+     "hu": "A támogatók szeretnének közel maradni a támogatott gyermekhez, bárhol is vannak."
+    },
+    "did": {
+     "en": "Part of the team building the MyCompassion web portal and app, where sponsors follow their sponsored children, write letters and manage their giving.",
+     "de": "Teil des Teams, das das MyCompassion-Webportal und die App baut, wo Paten ihre Patenkinder begleiten, Briefe schreiben und ihre Spenden verwalten.",
+     "hu": "Tagja vagyok a csapatnak, amely a MyCompassion webportált és alkalmazást építi, ahol a támogatók követhetik támogatott gyermekeiket, levelet írhatnak és kezelhetik adományaikat."
+    }
    },
    "img": "/img/mycompassion.jpg"
   },
@@ -85,9 +133,21 @@
     "hu": "Weboldal és hűségkártya"
    },
    "story": {
-    "forWho": "Our own cafe: my two brothers and I opened Bros Cafe in Budapest.",
-    "need": "A website that feels like the cafe, plus a digital loyalty card for regulars.",
-    "did": "Designed and built the site in Hungarian and English, set up hosting, and created an Apple Wallet loyalty card."
+    "forWho": {
+     "en": "Our own cafe: my two brothers and I opened Bros Cafe in Budapest.",
+     "de": "Unser eigenes Café: Meine zwei Brüder und ich haben das Bros Cafe in Budapest eröffnet.",
+     "hu": "A saját kávézónk: két testvéremmel nyitottuk meg a Bros Cafét Budapesten."
+    },
+    "need": {
+     "en": "A website that feels like the cafe, plus a digital loyalty card for regulars.",
+     "de": "Eine Website, die sich anfühlt wie das Café, dazu eine digitale Treuekarte für Stammgäste.",
+     "hu": "Egy weboldal, amely olyan, mint maga a kávézó, és egy digitális törzsvásárlói kártya a visszatérő vendégeknek."
+    },
+    "did": {
+     "en": "Designed and built the site in Hungarian and English, set up hosting, and created an Apple Wallet loyalty card.",
+     "de": "Die Website auf Ungarisch und Englisch gestaltet und gebaut, das Hosting eingerichtet und eine Treuekarte für Apple Wallet erstellt.",
+     "hu": "Megterveztem és megépítettem az oldalt magyarul és angolul, beállítottam a tárhelyet, és készítettem egy Apple Wallet törzsvásárlói kártyát."
+    }
    },
    "cat": "others",
    "tags": "website cafe coffee loyalty wallet budapest hungarian"
@@ -102,9 +162,21 @@
     "hu": "Weboldal"
    },
    "story": {
-    "forWho": "Workman, craftsmen with heart: carpentry, gardening, caretaking and repairs.",
-    "need": "A website for a new business where every job also gives people a chance to get back into work.",
-    "did": "In progress: a warm, simple site in German, with design, hosting and domain taken care of."
+    "forWho": {
+     "en": "Workman, craftsmen with heart: carpentry, gardening, caretaking and repairs.",
+     "de": "Workman, Handwerker mit Herz: Schreinerarbeiten, Gartenpflege, Hauswartung und Reparaturen.",
+     "hu": "Workman, mesteremberek szívvel: asztalosmunka, kertgondozás, gondnoki feladatok és javítások."
+    },
+    "need": {
+     "en": "A website for a new business where every job also gives people a chance to get back into work.",
+     "de": "Eine Website für ein neues Unternehmen, bei dem jeder Auftrag Menschen auch eine Chance gibt, wieder in die Arbeitswelt zu finden.",
+     "hu": "Weboldal egy új vállalkozásnak, ahol minden megbízás esélyt is ad embereknek, hogy visszataláljanak a munka világába."
+    },
+    "did": {
+     "en": "In progress: a warm, simple site in German, with design, hosting and domain taken care of.",
+     "de": "In Arbeit: eine warme, einfache Website auf Deutsch, inklusive Design, Hosting und Domain.",
+     "hu": "Folyamatban: egy barátságos, egyszerű német nyelvű oldal, a dizájntól a tárhelyen át a domainig mindennel."
+    }
    },
    "cat": "others",
    "tags": "website craftsman handwerker social business german"
@@ -121,9 +193,21 @@
     "hu": "Kerámiastúdió weboldala"
    },
    "story": {
-    "forWho": "Soar in Spirit, the pottery studio of a potter who wants to show her work online.",
-    "need": "A simple, beautiful site she can be proud of, without having to deal with any tech.",
-    "did": "In progress: design, build, hosting and the siss.hu domain, all taken care of."
+    "forWho": {
+     "en": "Soar in Spirit, the pottery studio of a potter who wants to show her work online.",
+     "de": "Soar in Spirit, das Töpferatelier einer Töpferin, die ihre Arbeiten online zeigen möchte.",
+     "hu": "Soar in Spirit, egy keramikus műhelye, aki szeretné online is megmutatni a munkáit."
+    },
+    "need": {
+     "en": "A simple, beautiful site she can be proud of, without having to deal with any tech.",
+     "de": "Eine einfache, schöne Website, auf die sie stolz sein kann, ohne sich um Technik kümmern zu müssen.",
+     "hu": "Egy egyszerű, szép oldal, amelyre büszke lehet, anélkül hogy a technikával kellene foglalkoznia."
+    },
+    "did": {
+     "en": "In progress: design, build, hosting and the siss.hu domain, all taken care of.",
+     "de": "In Arbeit: Design, Umsetzung, Hosting und die Domain siss.hu, alles aus einer Hand.",
+     "hu": "Folyamatban: dizájn, kivitelezés, tárhely és a siss.hu domain, minden egy kézből."
+    }
    }
   },
   {
@@ -136,9 +220,21 @@
     "hu": "Bibliai kvízjáték"
    },
    "story": {
-    "forWho": "Churches, youth groups and anyone who loves the Bible.",
-    "need": "A fun way to get to know the 66 books of the Bible, alone or as a group.",
-    "did": "Designed and built a quiz racing game with solo races, live group quizzes and a daily challenge."
+    "forWho": {
+     "en": "Churches, youth groups and anyone who loves the Bible.",
+     "de": "Kirchen, Jugendgruppen und alle, die die Bibel lieben.",
+     "hu": "Gyülekezeteknek, ifjúsági csoportoknak és mindenkinek, aki szereti a Bibliát."
+    },
+    "need": {
+     "en": "A fun way to get to know the 66 books of the Bible, alone or as a group.",
+     "de": "Eine unterhaltsame Art, die 66 Bücher der Bibel kennenzulernen, allein oder als Gruppe.",
+     "hu": "Szórakoztató mód arra, hogy megismerd a Biblia 66 könyvét, egyedül vagy csoportban."
+    },
+    "did": {
+     "en": "Designed and built a quiz racing game with solo races, live group quizzes and a daily challenge.",
+     "de": "Ein Quiz-Rennspiel gestaltet und gebaut, mit Solo-Rennen, Live-Quiz für Gruppen und einer täglichen Aufgabe.",
+     "hu": "Kvíz-versenyjátékot terveztem és építettem, egyéni futamokkal, élő csoportos kvízzel és napi kihívással."
+    }
    },
    "cat": "fun",
    "tags": "game bible quiz church youth web"
@@ -152,9 +248,21 @@
     "hu": "iPad-app"
    },
    "story": {
-    "forWho": "Our own family kitchen.",
-    "need": "One place to plan the week’s meals, keep our recipes and know what to buy.",
-    "did": "Built an iPad app that plans the week, stores recipes, turns them into one smart shopping list, and syncs it with the whole household over iCloud."
+    "forWho": {
+     "en": "Our own family kitchen.",
+     "de": "Unsere eigene Familienküche.",
+     "hu": "A saját családi konyhánk."
+    },
+    "need": {
+     "en": "One place to plan the week’s meals, keep our recipes and know what to buy.",
+     "de": "Ein Ort, um die Mahlzeiten der Woche zu planen, unsere Rezepte aufzubewahren und zu wissen, was wir einkaufen müssen.",
+     "hu": "Egy hely, ahol megtervezzük a heti étkezéseket, tároljuk a receptjeinket, és tudjuk, mit kell venni."
+    },
+    "did": {
+     "en": "Built an iPad app that plans the week, stores recipes, turns them into one smart shopping list, and syncs it with the whole household over iCloud.",
+     "de": "Eine iPad-App gebaut, die die Woche plant, Rezepte speichert, daraus eine schlaue Einkaufsliste macht und alles über iCloud mit dem ganzen Haushalt teilt.",
+     "hu": "iPad-alkalmazást készítettem, amely megtervezi a hetet, tárolja a recepteket, egyetlen okos bevásárlólistát készít belőlük, és iCloudon keresztül az egész háztartással megosztja."
+    }
    },
    "cat": "fun",
    "tags": "app ipad ios swift meal planning recipes shopping family"
@@ -169,9 +277,21 @@
     "hu": "Fotósorozat"
    },
    "story": {
-    "forWho": "The youth group of ForumG Solothurn, on their Ascension weekend in Loco, Ticino (2019).",
-    "need": "Pictures that bring back the weekend: the lake, the valleys and the days together.",
-    "did": "Photographed the whole weekend and picked out the highlights."
+    "forWho": {
+     "en": "The youth group of ForumG Solothurn, on their Ascension weekend in Loco, Ticino (2019).",
+     "de": "Die Jugendgruppe des ForumG Solothurn, an ihrem Auffahrtswochenende in Loco im Tessin (2019).",
+     "hu": "A solothurni ForumG ifjúsági csoportja, a mennybemenetel-napi hétvégéjükön a ticinói Locóban (2019)."
+    },
+    "need": {
+     "en": "Pictures that bring back the weekend: the lake, the valleys and the days together.",
+     "de": "Bilder, die das Wochenende zurückbringen: der See, die Täler und die gemeinsamen Tage.",
+     "hu": "Képek, amelyek visszahozzák a hétvégét: a tó, a völgyek és az együtt töltött napok."
+    },
+    "did": {
+     "en": "Photographed the whole weekend and picked out the highlights.",
+     "de": "Das ganze Wochenende fotografiert und die schönsten Bilder ausgewählt.",
+     "hu": "Végigfotóztam a hétvégét, és kiválogattam a legszebb képeket."
+    }
    },
    "gallery": [
     "/img/loco/valley.jpg",
@@ -181,7 +301,12 @@
     "/img/loco/path.jpg",
     "/img/loco/grill.jpg"
    ],
-   "img": "/img/loco-cover.jpg"
+   "img": "/img/loco-cover.jpg",
+   "titles": {
+    "en": "Ticino weekend",
+    "de": "Wochenende im Tessin",
+    "hu": "Ticinói hétvége"
+   }
   }
  ]
 }

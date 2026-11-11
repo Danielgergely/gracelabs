@@ -17,16 +17,20 @@ interface Env {
 const json = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json' } });
 const clean = (v: unknown, max: number) => String(v ?? '').replace(/\r/g, '').trim().slice(0, max);
+const oneLine = (v: unknown, max: number) => clean(v, max).replace(/\s+/g, ' ');
 
 export default {
   async fetch(req, env, ctx) {
     const url = new URL(req.url);
     const { pathname } = url;
-    if (url.hostname === 'www.gracelabs.dev') {
+    // plain http only on the real site (wrangler dev also reports http, without this header)
+    const plainHttp = url.protocol === 'http:' && req.headers.get('x-forwarded-proto') === 'http';
+    if (url.hostname === 'www.gracelabs.dev' || plainHttp) {
       url.hostname = 'gracelabs.dev';
+      url.protocol = 'https:';
       return Response.redirect(url.toString(), 301);
     }
-    if (pathname === '/whatsapp') {
+    if (pathname === '/whatsapp' || pathname === '/whatsapp/') {
       const number = (env.WHATSAPP_NUMBER ?? '').replace(/\D/g, ''); // wa.me wants digits only, no + or spaces
       return number
         ? Response.redirect(`https://wa.me/${number}`, 302)
@@ -38,16 +42,22 @@ export default {
 } satisfies ExportedHandler<Env>;
 
 async function contact(req: Request, env: Env, ctx: ExecutionContext) {
-  if (req.method !== 'POST') return json({ ok: false }, 405);
+  if (req.method !== 'POST') return new Response(JSON.stringify({ ok: false }), { status: 405, headers: { 'Content-Type': 'application/json', Allow: 'POST' } });
+  // only the site's own form may post here: same origin, JSON, small
+  const origin = req.headers.get('origin');
+  if (origin && origin !== new URL(req.url).origin) return json({ ok: false, error: 'origin' }, 403);
+  if (!(req.headers.get('content-type') ?? '').includes('application/json')) return json({ ok: false, error: 'bad' }, 415);
+  if (Number(req.headers.get('content-length') ?? 0) > 20_000) return json({ ok: false, error: 'bad' }, 413);
   const ip = req.headers.get('cf-connecting-ip') ?? 'local';
   if (!(await env.CONTACT_LIMIT.limit({ key: ip })).success) return json({ ok: false, error: 'rate' }, 429);
 
   let body: Record<string, unknown>;
   try { body = await req.json(); } catch { return json({ ok: false, error: 'bad' }, 400); }
-  if (clean(body.website, 200)) return json({ ok: true }); // honeypot filled: pretend it worked
+  if (!body || typeof body !== 'object' || Array.isArray(body)) return json({ ok: false, error: 'bad' }, 400);
+  if (clean(body.hp, 200)) return json({ ok: true }); // honeypot filled: pretend it worked
 
-  const name = clean(body.name, 100);
-  const contactInfo = clean(body.contact, 200);
+  const name = oneLine(body.name, 100);
+  const contactInfo = oneLine(body.contact, 200);
   const message = clean(body.message, 5000);
   const lang = ['en', 'de', 'hu'].includes(String(body.lang)) ? String(body.lang) : 'en';
   if (!contactInfo || !message) return json({ ok: false, error: 'missing' }, 400);
@@ -69,7 +79,10 @@ async function contact(req: Request, env: Env, ctx: ExecutionContext) {
       headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
       body: JSON.stringify(email),
     });
-    if (!res.ok) return json({ ok: false, error: 'send' }, 502);
+    if (!res.ok) {
+      console.error('resend failed', res.status, (await res.text()).slice(0, 300));
+      return json({ ok: false, error: 'send' }, 502);
+    }
   }
 
   // deliberately without name or message: the privacy notice promises a content-free ping

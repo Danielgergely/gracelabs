@@ -5,7 +5,7 @@ const { lang, path = '' } = Astro.props;
 const t = tr(lang);
 const home = `/${lang}/`;
 ---
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main">{{ en: 'Skip to content', de: 'Zum Inhalt springen', hu: 'Ugrás a tartalomra' }[lang]}</a>
 <nav class="d-nav">
   <a class="brand" href={home}><b>{SITE.brand}</b></a>
   <div>

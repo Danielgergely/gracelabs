@@ -1,5 +1,5 @@
 ---
-import { SITE, SERVICES, WORK, CAT_COLORS, hexToRgb, t as tr, type Lang } from '../data/site';
+import { SITE, SERVICES, WORK, REVIEWS, CAT_COLORS, hexToRgb, t as tr, type Lang } from '../data/site';
 import WaIcon from './WaIcon.astro';
 
 interface Props { lang: Lang }
@@ -7,13 +7,21 @@ const { lang } = Astro.props;
 const t = tr(lang);
 const [qo, qc] = t.quotes;
 const bgOf = (w: { img?: string; bg?: string }) => (w.img ? `url(${w.img})` : w.bg);
+// titles and stories in the page's language
+type L = Record<string, string>;
+const items = WORK.items.map(w => ({
+  ...w,
+  title: (w as { titles?: L }).titles?.[lang] ?? w.title,
+  story: Object.fromEntries(Object.entries(w.story).map(([k, v]) => [k, (v as L)[lang]])),
+}));
+const closeLabel = { en: 'Close', de: 'Schliessen', hu: 'Bezárás' }[lang];
 
 // data the client script needs (search, story cards, form messages)
 const clientData = {
   lang,
   t: { soon: t.soon, stFor: t.stFor, stNeed: t.stNeed, stDid: t.stDid, stVisit: t.stVisit, lThanks: t.lThanks, lSend: t.lSend, lError: t.lError },
   cats: Object.fromEntries(WORK.cats.map(c => [c, (t as Record<string, unknown>)[`cat_${c}`]])),
-  work: WORK.items,
+  work: items,
 };
 ---
 <canvas class="d-beam" aria-hidden="true"></canvas>
@@ -80,7 +88,7 @@ const clientData = {
       <div class="d-row" data-cat={cat} data-lit-only data-off="60" style={`--c:${hexToRgb(CAT_COLORS[cat])}`}>
         <div class="d-row-h"><span>{clientData.cats[cat]}</span><span class="n"></span></div>
         <div class="d-strip">
-          {WORK.items.map((w, i) => [w, i] as const).filter(([w]) => w.cat === cat).map(([w, i], n) => (
+          {items.map((w, i) => [w, i] as const).filter(([w]) => w.cat === cat).map(([w, i], n) => (
             <button class="d-pol" data-i={i} style={`--i:${n};--bg:${bgOf(w)}`}>
               {w.soon && <span class="soon">{t.soon}</span>}
               <div class="ph"></div>
@@ -91,7 +99,19 @@ const clientData = {
       </div>
     ))}
     <p class="d-none" hidden>{t.noResults}</p>
-    <dialog class="d-story"><button class="x" aria-label="Close">×</button><div class="body"></div></dialog>
+    <dialog class="d-story" aria-labelledby="story-title"><button class="x" aria-label={closeLabel}>×</button><div class="body"></div></dialog>
+  </section>
+
+  <section class="d-game" id="game">
+    <a class="d-game-card" href={SITE.game} target="_blank" rel="noopener" data-lit>
+      <img src="/img/66.jpg" alt="" width="600" height="509" loading="lazy" decoding="async" />
+      <div>
+        <div class="k">{t.gameKicker}</div>
+        <h2>{t.gameTitle}</h2>
+        <p>{t.gameLine}</p>
+        <span class="btn primary">{t.gameBtn} ↗</span>
+      </div>
+    </a>
   </section>
 
   <section class="d-about" id="about">
@@ -109,6 +129,21 @@ const clientData = {
     </div>
   </section>
 
+  {REVIEWS.length > 0 && (
+    <section class="d-reviews" id="reviews">
+      <div class="k" data-lit>{t.revKicker}</div>
+      <h2 data-lit>{t.revTitle}</h2>
+      <div class="d-rev-grid">
+        {REVIEWS.map(r => (
+          <figure class="d-rev" data-lit>
+            <blockquote>{qo}{r.quote[lang]}{qc}</blockquote>
+            <figcaption><b>{r.name}</b>{r.role && <span>{r.role[lang]}</span>}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+  )}
+
   <section class="d-contact" id="contact">
     <div class="k" data-lit>{t.contactKicker}</div>
     <p class="lead" data-lit>{t.contactLead}</p>
@@ -119,8 +154,8 @@ const clientData = {
         <label for="f-name">{t.lName}</label><input id="f-name" name="name" autocomplete="name" maxlength="100" />
         <label for="f-contact">{t.lContact}</label><input id="f-contact" name="contact" autocomplete="email" maxlength="200" required />
         <label for="f-msg">{t.lHelp}</label><textarea id="f-msg" name="message" rows="3" placeholder={t.lPh} maxlength="5000" required></textarea>
-        <div class="hp" aria-hidden="true"><label for="f-web">Website</label><input id="f-web" name="website" tabindex="-1" autocomplete="off" /></div>
-        <div class="row"><button type="submit">{t.lSend}</button><span class="or">{t.lOr} <a href={`mailto:${SITE.email}`}>{SITE.email}</a></span></div>
+        <div class="hp" aria-hidden="true"><label for="f-hp">Leave this empty</label><input id="f-hp" name="hp" tabindex="-1" autocomplete="off" /></div>
+        <div class="row"><button type="submit" aria-live="polite">{t.lSend}</button><span class="or">{t.lOr} <a href={`mailto:${SITE.email}`}>{SITE.email}</a></span></div>
         <p class="err" role="alert" hidden></p>
       </form>
       <div class="d-env" aria-hidden="true"><div class="back"></div><div class="front"></div><div class="flap"></div><div class="seal">GL</div></div>
@@ -133,5 +168,6 @@ const clientData = {
 <script type="application/json" id="gl-data" set:html={JSON.stringify(clientData)}></script>
 <script>
   import { initHome } from '../scripts/home';
-  initHome();
+  // if anything goes wrong, drop the "js" class so nothing stays dimmed or hidden (see global.css)
+  try { initHome(); } catch (e) { document.documentElement.classList.remove('js'); console.error(e); }
 </script>

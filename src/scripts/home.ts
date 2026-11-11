@@ -148,9 +148,9 @@ export function initHome() {
     const row = (k: string, v: string) => (v ? `<div><dt>${t[k]}</dt><dd>${esc(v)}</dd></div>` : '');
     dlg.style.setProperty('--c', c);
     dlg.querySelector('.body')!.innerHTML = `<div class="ph" style="--bg:${bgOf(w)}"></div><div class="in">
-      <div class="k">${esc(w.kind[data.lang])}${w.soon ? ' · ' + t.soon : ''}</div><h3>${esc(w.title)}</h3>
+      <div class="k">${esc(w.kind[data.lang])}${w.soon ? ' · ' + t.soon : ''}</div><h3 id="story-title">${esc(w.title)}</h3>
       <dl>${row('stFor', st.forWho)}${row('stNeed', st.need)}${row('stDid', st.did)}</dl>
-      ${w.gallery?.length ? `<div class="gal">${w.gallery.map(src => `<img src="${src}" loading="lazy" alt="">`).join('')}</div>` : ''}
+      ${w.gallery?.length ? `<div class="gal">${w.gallery.map(src => `<img src="${src}" loading="lazy" alt="${esc(w.title)}">`).join('')}</div>` : ''}
       ${w.link ? `<a class="btn primary" href="${w.link}" target="_blank" rel="noopener">${t.stVisit} ↗</a>` : ''}</div>`;
     dlg.showModal();
     if (reduced) return;
@@ -179,11 +179,11 @@ export function initHome() {
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const fd = new FormData(form);
-    const body = { name: fd.get('name'), contact: fd.get('contact'), message: fd.get('message'), website: fd.get('website'), lang: data.lang };
+    const body = { name: fd.get('name'), contact: fd.get('contact'), message: fd.get('message'), hp: fd.get('hp'), lang: data.lang };
     if (!form.reportValidity()) return;
     btn.disabled = true; err.hidden = true;
     try {
-      const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+      const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), signal: AbortSignal.timeout(15000) });
       if (!res.ok) throw new Error(String(res.status));
       btn.textContent = data.t.lThanks;
       form.reset();

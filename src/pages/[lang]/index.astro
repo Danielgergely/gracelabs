@@ -3,14 +3,27 @@ import Base from '../../layouts/Base.astro';
 import Nav from '../../components/Nav.astro';
 import Home from '../../components/Home.astro';
 import Footer from '../../components/Footer.astro';
-import { LANGS, META, type Lang } from '../../data/site';
+import { LANGS, META, SITE, type Lang } from '../../data/site';
 
 export function getStaticPaths() {
   return LANGS.map(lang => ({ params: { lang } }));
 }
 const lang = Astro.params.lang as Lang;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: SITE.brand,
+  url: `${SITE.url}/${lang}/`,
+  image: `${SITE.url}/og.jpg`,
+  description: META[lang].description,
+  email: SITE.email,
+  address: { '@type': 'PostalAddress', streetAddress: 'Mattenweg 17', postalCode: '4802', addressLocality: 'Strengelbach', addressCountry: 'CH' },
+  areaServed: ['CH', 'HU'],
+  knowsLanguage: ['en', 'de', 'hu'],
+  founder: { '@type': 'Person', name: 'Daniel Gergely', sameAs: [SITE.linkedin, SITE.github] },
+};
 ---
-<Base lang={lang} title={META[lang].title} description={META[lang].description}>
+<Base lang={lang} title={META[lang].title} description={META[lang].description} jsonLd={jsonLd}>
   <Nav lang={lang} />
   <Home lang={lang} />
   <Footer lang={lang} />
