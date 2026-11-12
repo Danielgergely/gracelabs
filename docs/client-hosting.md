@@ -28,10 +28,3 @@ Decided 11 Nov 2026. Goal: Daniel manages the sites, clients stay independent, a
 ## Why not one big server
 
 A shared server makes Grace Labs a hosting provider: updates, security, backups, outages that take every client down at once, processor contracts, and chasing monthly payments. Cloudflare serves static sites faster and for free. A server only makes sense for software that needs one (WordPress/PHP), and small sites should avoid that.
-
-## Status
-
-| Client | Repo | Preview | Domain | Notes |
-|---|---|---|---|---|
-| Workman | `~/git/workman` | workman.gracelabs.dev | not known yet | imprint placeholders still open |
-| Soar in Spirit (pottery) | – | – | siss.hu at Rackhost | small Rackforest server can be cancelled after moving; check the domain is in the potter's name |
