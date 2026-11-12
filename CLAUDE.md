@@ -32,4 +32,4 @@ Personal business site of Daniel Gergely: IT support, websites/apps, AI advice, 
 
 ## Client hosting
 
-Client websites follow model C, see `docs/client-hosting.md`. Reference client repo: `~/git/workman`.
+Client websites follow model C, see `docs/client-hosting.md`. Reference client repo: `~/git/gracelabs-dev/workman`.
